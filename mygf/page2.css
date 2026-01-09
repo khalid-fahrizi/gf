@@ -1,0 +1,82 @@
+body {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Quicksand:wght@400;600;700&display=swap');
+
+.bounce-ball {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.photo-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.photo-frame:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.math-question {
+  background: linear-gradient(135deg, #fff 0%, #fce7f3 100%);
+  border: 3px solid #ec4899;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 10px 0;
+  transition: transform 0.2s;
+}
+
+.math-question:hover {
+  transform: scale(1.02);
+}
+
+.math-input {
+  border: 2px solid #ec4899;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  width: 100px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+.math-input:focus {
+  outline: none;
+  border-color: #be185d;
+  box-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
+}
+
+.correct {
+  background: linear-gradient(135deg, #86efac 0%, #22c55e 100%);
+  animation: correctAnim 0.5s ease;
+}
+
+@keyframes correctAnim {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.basketball-bg {
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(236, 72, 153, 0.1) 35px, rgba(236, 72, 153, 0.1) 70px);
+}
+
+@view-transition { navigation: auto; }
